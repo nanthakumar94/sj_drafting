@@ -1,0 +1,180 @@
+{% extends "block.html" %}
+{% block title %}Request for Quote - SJ Drafting Company{% endblock %}
+{% load static %}
+{% block content %}
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">Contact</h2>
+          <p data-aos="fade-in">If you like to submit a request for proposal or have questions about the services we offer.<br>Submit your request using the form to the right. Call us and ask to speak someone in sales.Email us while attaching your project's scope with associated inputs.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+<!--              <div class="col-md-12">-->
+<!--                <div class="info-box" data-aos="fade-up">-->
+<!--                  <i class="bx bx-map"></i>-->
+<!--                  <h3>Our Address</h3>-->
+<!--                  <p>A108 Adam Street, New York, NY 535022</p>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>sales@thedraftingcompany.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+(800)504-2658</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form method="post" id="contact_form" action="contact" role="form" class="php-email-form" data-aos="fade-up">
+              {% csrf_token %}
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+                <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" data-rule="minlen:email" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" data-rule="minlen:10" data-msg="Please enter at correct number" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="project"  data-rule="required" data-msg="Please write something for us" placeholder="Project Details"></input>
+                <div class="validate"></div>
+              </div>
+              {% include 'messages.html'%}
+              <div class="text-center"><button type="submit" onclick="set_time()" >Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="about section-bg">
+        <div class="section-title">
+          <h2 data-aos="fade-in">A Brief History</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <h2 style="text-align: center;"><strong>1993</strong></h2>
+                <hr style="border-color: #012358;margin-top: 4px;">
+                <p style="text-align: center;">The Drafting Company, TDC opens, focusing on providing a variety of drafting services and support to manufacturers and building construction trades.</p>
+            </div>
+            <div class="col-md-2">
+                <h2 style="text-align: center;"><strong>2002</strong></h2>
+                <hr style="border-color: #012358;margin-top: 4px;">
+                <p style="text-align: center;">TDC adds Inventor and SolidWorks 3D modeling services to its growing list of offerings.</p>
+            </div>
+            <div class="col-md-2">
+                <h2 style="text-align: center;"><strong>2007</strong></h2>
+                <hr style="border-color: #012358;margin-top: 4px;">
+                <p style="text-align: center;">We expanded our sales coverage areas to include Houston, Los Angeles, New York, and St. Louis.</p>
+            </div>
+            <div class="col-md-3">
+                <h2 style="text-align: center;"><strong>2010</strong></h2>
+                <hr style="border-color: #012358;margin-top: 4px;">
+                <p style="text-align: center;">Added Revit Building Information Modeling (BIM) service capabilities within Autodesk’s AEC software package suite of products, to further assist and support in the growing needs of architectural, structural, mechanical, electrical, plumbing, and fire protection construction disciplines.</p>
+            </div>
+            <div class="col-md-3">
+                <h2 style="text-align: center;"><strong>2017</strong></h2>
+                <hr style="border-color: #012358;margin-top: 4px;">
+                <p style="text-align: center;">TDC more than doubled its nationwide sales coverage areas to include Colorado, Dallas, Fort Worth, Honolulu, Las Vegas, Miami, Tampa Bay, St. Petersburg, Phoenix and Washington DC.</p>
+            </div>
+        </div>
+</section>
+    <section id="mission" class="about section-bg">
+      <div class="container">
+        <div class="row">
+<!--          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>-->
+          <div class="col-xl-12 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <h3 data-aos="fade-in" data-aos-delay="100">OUR MISSION</h3>
+              <p>&nbsp;</p>
+              <p data-aos="fade-in" align="justify">
+                <p data-aos="fade-in">Our mission is to create long lasting relationships with our clients. We believe by leveraging the integration of the newest technology and keeping a vigilant eye on the evolving CAD/BIM principles we will help support the building and manufacturing industry improve business practices that enable excellence in communications and collaboration.</p>
+                <p>&nbsp;</p>
+                <p data-aos="fade-in">We offer a great value and consistent quality.</p>
+                <p>&nbsp;</p>
+                <p data-aos="fade-in" align="justify">We have an exceptional team of highly trained and diversely experienced designers, architects and engineers with certified project managers supported by our world-class infrastructure that enables the delivery of complex projects to our clients. Our company has an extraordinary amount of experience. We have successfully completed thousands of projects over the past 40+ years.</p>
+                <p data-aos="fade-in">&nbsp;</p>
+                <p data-aos="fade-in" align="justify">We are committed to excellence. We have the technology. We are a smart and very talented team. Our people are proactive, driven and passionate. We go the extra mile.</p>
+              </p>
+              <!-- End .content-->
+          </div>
+        </div>
+        </div>
+          <p align="center"><strong>Let’s build something amazing together!</strong></p>
+      </div>
+    </section><!-- End About Section -->
+    <!-- ======= Features Section ======= -->
+    <section id="tdc" class="features section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in">The TDC Advantage</h2>
+          <p data-aos="fade-in"></p>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-6" data-aos="fade-in">
+            <h3>Team</h3>
+            <p class="font-italic">
+              Our team offers a great depth of knowledge and experience, with our services priced to be competitive. All of our services are provided by experienced personnel who keep in mind our clients’ best interests.
+            </p>
+          </div>
+            <div class="col-md-6" data-aos="fade-in">
+            <h3>Mission</h3>
+            <p class="font-italic">
+              Our principal mission is to be committed, dependable and sensitive to cost while staying focused on meeting our client needs – those expected in today’s driven and forward thinking culture.
+            </p>
+          </div>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-6" data-aos="fade-in">
+            <h3>Resources</h3>
+            <p class="font-italic">
+              TDC is fully equipped with the resources required to provide services that exceed our client’s expectations.
+            </p>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-in">
+            <h3>Satisfaction</h3>
+            <p>Our customer’s complete satisfaction is 100% guaranteed. Most projects are quoted on a “not to exceed” basis based on the project’s scope and inputs submitted by our client, while committing to your delivery schedule. We fully stand behind our output quality, services and pricing. As a result, we seek to establish long-term relationships with our clients, and we value all business opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+{% endblock %}

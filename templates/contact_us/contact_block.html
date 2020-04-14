@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <title>{% block title %}BIM and CAD Services for Construction, AEC, MEP and Manufacturing{% endblock %}</title>    
+  <meta content="Building Information Modeling (BIM) and Computer Aided Drafting (CAD) services for Construction Clients working in AEC, MEP &amp; Manufacturing. Result Driven." name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+<!--  <link href="{% static 'css/style.css' %}" rel="stylesheet">-->
+  <link href="{% static 'css/style_test.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bocor - v2.0.0
+  * Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="/">SJ <span> </span>Drafting Company<span>.</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+        {% with url_name=request.resolver_match.url_name %}
+          <li class="{% if url_name == 'index'%}active{% endif %}"><a href="{% url 'index' %}">HOME</a></li>
+          <li class="{% if url_name == 'about_us'%}active{% endif %}"><a href="{% url 'about_us' %}">ABOUT US</a></li>
+          <li class="drop-down {% if url_name == 'bim_services' or url_name == 'autocad_services'%}active{% endif %} "><a href="">SERVICES</a>
+            <ul>
+              <li class="drop-down "><a href="#">BIM</a>
+                <ul>
+                  <li ><a href="{% url 'bim_services' %}">CLIENT TYPES</a></li>
+                  <li><a href="{% url 'bim_services' %}">TRADE TYPES</a></li>
+                  <li><a href="{% url 'bim_services' %}">DISCIPLINE TYPES</a></li>
+                  <li><a href="{% url 'bim_services' %}">PROJECT TYPES</a></li>
+                  <li><a href="{% url 'bim_services' %}">SERVICES OFFERED</a></li>
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">CAD</a>
+                <ul>
+                  <li><a href="{% url 'autocad_services' %}">CONSTRUCTION</a></li>
+                  <li><a href="{% url 'autocad_services' %}">MANUFACTURING</a></li>
+                </ul>
+              </li>
+<!--              <li><a href="#">Drop Down 3</a></li>-->
+<!--              <li><a href="#">Drop Down 4</a></li>-->
+<!--              <li><a href="#">Drop Down 5</a></li>-->
+            </ul>
+          </li>
+<!--          <li><a href="#services">Services</a></li>-->
+          <li class="{% if url_name == 'request_for_quote'%}active{% endif %}"><a href="{% url 'request_for_quote' %}">REQUEST FOR QUOTE</a></li>
+
+          <li><a href="tel:18005042658">CALL US</a></li>
+          <li class="{% if url_name == 'contact_us'%}active{% endif %}"><a href="{% url 'contact_us' %}">CONTACT US</a>
+          </li>
+<!--          <li><a href="#contact">Contact Us</a></li>-->
+
+<!--          <li class="get-started"><a href="#about">Get Started</a></li>-->
+        </ul>
+        {% endwith %}
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  {% block contact %}
+
+  {% endblock %}
+<!-- <section id="mission" class="about section-bg">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--&lt;!&ndash;          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>&ndash;&gt;-->
+<!--          <div class="col-xl-12 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">-->
+<!--            <div class="content d-flex flex-column justify-content-center">-->
+<!--              <h3 data-aos="fade-in" data-aos-delay="100">OUR MISSION</h3>-->
+<!--              <p>&nbsp;</p>-->
+<!--              <p data-aos="fade-in" align="justify">-->
+<!--                <p data-aos="fade-in">Our mission is to create long lasting relationships with our clients. We believe by leveraging the integration of the newest technology and keeping a vigilant eye on the evolving CAD/BIM principles we will help support the building and manufacturing industry improve business practices that enable excellence in communications and collaboration.</p>-->
+<!--                <p>&nbsp;</p>-->
+<!--                <p data-aos="fade-in">We offer a great value and consistent quality.</p>-->
+<!--                <p>&nbsp;</p>-->
+<!--                <p data-aos="fade-in" align="justify">We have an exceptional team of highly trained and diversely experienced designers, architects and engineers with certified project managers supported by our world-class infrastructure that enables the delivery of complex projects to our clients. Our company has an extraordinary amount of experience. We have successfully completed thousands of projects over the past 40+ years.</p>-->
+<!--                <p data-aos="fade-in">&nbsp;</p>-->
+<!--                <p data-aos="fade-in" align="justify">We are committed to excellence. We have the technology. We are a smart and very talented team. Our people are proactive, driven and passionate. We go the extra mile.</p>-->
+<!--              </p>-->
+<!--              &lt;!&ndash; End .content&ndash;&gt;-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>-->
+<!--  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />-->
+<!--      <div id='map' style='width: 400px; height: 300px;'></div>-->
+<!--        <script>-->
+<!--          mapboxgl.accessToken = 'pk.eyJ1IjoibmFudGhhayIsImEiOiJjazhpY3JjcDIwNHVvM25tMW9lNmoyNmhwIn0.ddKzPch07_PuYN0KODAZOA';-->
+<!--          var map = new mapboxgl.Map({-->
+<!--            container: 'map',-->
+<!--            style: 'mapbox://styles/mapbox/streets-v11'-->
+
+<!--          });-->
+<!--        </script>-->
+ <footer id="footer">
+
+<!--    <div class="footer-top">-->
+
+<!--      <div class="container" data-aos="fade-up">-->
+
+<!--        <div class="row  justify-content-center">-->
+<!--          <div class="col-lg-6">-->
+<!--            <h3>Bocor</h3>-->
+<!--            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="row footer-newsletter justify-content-center">-->
+<!--          <div class="col-lg-6">-->
+<!--            <form action="" method="post">-->
+<!--              <input type="email" name="email" placeholder="Enter your Email"><input type="submit" value="Subscribe">-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="social-links">-->
+<!--          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+<!--          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
+<!--          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+<!--          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>-->
+<!--          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright" align="center">
+        <span>COPYRIGHT AND TRADEMARKS NOTICE <br> All companies and products mentioned herein are trademarks or registered trademarks of their respective trademark owners.<br>The trademarks and service marks of TDC or its subsidiaries identified herein are owned by TDC or a subsidiary.<br></span>
+         Copyright &copy; 2019 to present <strong><a href="/">The Drafting Company</a></strong>,here in TDC.All Rights Reserved
+      </div>
+<!--      <div class="credits">-->
+<!--        &lt;!&ndash; All the links in the footer should remain intact. &ndash;&gt;-->
+<!--        &lt;!&ndash; You can delete the links only if you purchased the pro version. &ndash;&gt;-->
+<!--        &lt;!&ndash; Licensing information: https://bootstrapmade.com/license/ &ndash;&gt;-->
+<!--        &lt;!&ndash; Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/ &ndash;&gt;-->
+<!--        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+<!--      </div>-->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>

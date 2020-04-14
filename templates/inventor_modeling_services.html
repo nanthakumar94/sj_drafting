@@ -1,0 +1,119 @@
+{% extends "block.html" %}
+{% load static %}
+{% block title %}Autodesk&#039;s Inventor | Commercial Modeling Solutions &amp; Services{% endblock %}
+{% block head %}
+    <div class="container">
+      <div class="row d-flex align-items-center">
+      <div class=" col-lg-12 py-5 py-lg-0 order-2 order-lg-1" >
+          <h3 style="color:white;"><strong>Experienced Service Providers of Autodesk’s Inventor Modeling for Manufacturers</strong></h3>
+<!--        <a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+<!--        <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="">-->
+      </div>
+    </div>
+    </div>
+
+
+    <section id="about" class="about section-bg">
+      <div class="container">
+
+        <div class="row">
+<!--          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>-->
+          <div class="col-xl-12 pl-0 pl-lg-5 pr-lg-1 d-flex align-items-stretch">
+            <div class="content d-flex flex-column justify-content-center">
+              <p data-aos="fade-in" align="justify">
+                <p data-aos="fade-in" align="justify">We offer different types of Inventor Services from simple drawing conversions to advanced detailing that best fits your technical requirements while producing the right set of project deliverables.</p>
+                <p align="justify">With Inventor , we can develop projects of any size or complexity. With proven Inventor technology, we can confidently take on any project. No matter what design information you are working with or what kind of deliverables are required, we can rely on Inventor’s flexibility and power to get the job done on time and budget.</p>
+                <p align="justify">We are offering experienced off-site Inventor support for Manufactures. Inventor supports all types and scales, working for professionals in any disciplines on projects of every kind utilizing a variety of data input formats like PDF, DWG, STP…etc. files to develop project related drawing packages. We confidently apply Inventor to detail and advance to the fabrication of equipment and products manufacturing all within an infinite array of client sectors.</p>
+              </p>
+
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-in" style="color:#213b52;">Contact</h2>
+          <p data-aos="fade-in">If you like to submit a request for proposal or have questions about the services we offer.<br>Submit your request using the form to the right. Call us and ask to speak someone in sales.Email us while attaching your project's scope with associated inputs.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+<!--              <div class="col-md-12">-->
+<!--                <div class="info-box" data-aos="fade-up">-->
+<!--                  <i class="bx bx-map"></i>-->
+<!--                  <h3>Our Address</h3>-->
+<!--                  <p>A108 Adam Street, New York, NY 535022</p>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>sales@thedraftingcompany.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+(800)504-2658</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-up">
+              <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Company Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+                <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" data-rule="minlen:email" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" data-rule="minlen:10" data-msg="Please enter at correct number" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" name="project"  data-rule="required" data-msg="Please write something for us" placeholder="Project Details"></input>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+{% endblock %}
